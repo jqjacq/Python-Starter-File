@@ -4,18 +4,21 @@
 
 #### Steps to get started: 
 Inside your terminal and the file you are working on...
-1) `git init`
-<br> Initializing empty Git repository.
-2) `poetry init` 
-<br> Optional to fill out Version, Description, Author, License, Compatible Python versions, define main dependencies interactively, and development dependencies interactively. I don't define main dependencies and development dependencies interactively. Once filled out, confirm generation. 
+1) In terminal: `git init`
+Initializing empty Git repository.
+2) `poetry init` \
+Optional to fill out Version, Description, Author, License, Compatible Python versions, define main dependencies interactively, and development dependencies interactively. I don't define main dependencies and development dependencies interactively. Once filled out, confirm generation. 
 3) Create a `poetry.toml` file to keep the environment inside this file. 
-Inside the file: 
-`[virtualenvs] in-project = true` 
-<br> To make sure environment is inside the project: Check with `poetry config --list` where `virtualenvs.in-project = true`, not null. 
-4) `poetry install`
-<br> Installing dependency manager
-5)  `poetry add -G dev black isort jupyter`
-<br> Installing dependencies: Black, isort, and jupyter. 
+Inside the file: `[virtualenvs] in-project = true`
+
+  - TIP 1: Make sure there is a break between `[virtualenvs]` and `in-project=true`. Here is an example of how it should look like: \
+`[virtualenvs]` \
+               `in-project=true`
+  - TIP 2: To make sure environment is inside the project: Check with `poetry config --list` where `virtualenvs.in-project = true`, not null. \
+4) In terminal: `poetry install` \
+Installing dependency manager
+5)  In terminal: `poetry add -G dev black isort jupyter` 
+Installing dependencies: Black, isort, and jupyter. 
 
 6) To test out the file, first create a python file then run `poetry run python filename.py` in your terminal.
 Alternatively, run `poetry shell`. When running `poetry shell`, make sure to run `deactivate` so you don't run into issues in another environment. 
